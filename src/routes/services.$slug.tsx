@@ -60,7 +60,9 @@ function ServiceDetailPage() {
         <div className="page-shell">
           <div className="service-detail-grid">
             <div data-reveal>
-              <span className="service-detail-badge">Service {service.number} of {services.length}</span>
+              <span className="service-detail-badge">
+                Service {service.number} of {services.length}
+              </span>
               <h2>
                 What this service
                 <br />
@@ -70,18 +72,35 @@ function ServiceDetailPage() {
             </div>
             <div data-reveal>
               <p className="eyebrow">Project types</p>
-              <h3 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.5rem,2.5vw,2.2rem)", fontWeight: 400, margin: "1.5rem 0 0" }}>
+              <h3
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "clamp(1.5rem,2.5vw,2.2rem)",
+                  fontWeight: 400,
+                  margin: "1.5rem 0 0",
+                }}
+              >
                 We handle these types of projects
               </h3>
               <div className="project-type-tags" style={{ marginTop: "1.5rem" }}>
                 {service.projectTypes.map((pt) => (
-                  <span className="project-type-tag" key={pt}>{pt}</span>
+                  <span className="project-type-tag" key={pt}>
+                    {pt}
+                  </span>
                 ))}
               </div>
 
-              <div style={{ marginTop: "3rem", paddingTop: "2.5rem", borderTop: "1px solid var(--border)" }}>
+              <div
+                style={{
+                  marginTop: "3rem",
+                  paddingTop: "2.5rem",
+                  borderTop: "1px solid var(--border)",
+                }}
+              >
                 <p className="eyebrow">Our approach</p>
-                <p className="service-approach-text" style={{ marginTop: "1.2rem" }}>{service.approach}</p>
+                <p className="service-approach-text" style={{ marginTop: "1.2rem" }}>
+                  {service.approach}
+                </p>
               </div>
             </div>
           </div>
@@ -99,9 +118,17 @@ function ServiceDetailPage() {
                 <br />
                 <em>fully managed.</em>
               </h2>
-              <p style={{ maxWidth: "32rem", color: "var(--muted-foreground)", marginTop: "1.5rem", lineHeight: 1.85, fontSize: ".92rem" }}>
-                We manage every component of this service in-house — no outsourcing, no handoffs, no gaps in
-                accountability.
+              <p
+                style={{
+                  maxWidth: "32rem",
+                  color: "var(--muted-foreground)",
+                  marginTop: "1.5rem",
+                  lineHeight: 1.85,
+                  fontSize: ".92rem",
+                }}
+              >
+                We manage every component of this service in-house — no outsourcing, no handoffs, no
+                gaps in accountability.
               </p>
             </div>
             <div data-reveal>
@@ -147,10 +174,20 @@ function ServiceDetailPage() {
                 data-reveal
               >
                 <span className="service-number">{s.number}</span>
-                <h3 style={{ margin: 0, fontFamily: "var(--font-display)", fontSize: "clamp(1.2rem,2vw,1.8rem)", fontWeight: 400, lineHeight: 1.1 }}>
+                <h3
+                  style={{
+                    margin: 0,
+                    fontFamily: "var(--font-display)",
+                    fontSize: "clamp(1.2rem,2vw,1.8rem)",
+                    fontWeight: 400,
+                    lineHeight: 1.1,
+                  }}
+                >
                   {s.title}
                 </h3>
-                <p style={{ margin: 0, color: "var(--muted-foreground)", fontSize: ".88rem" }}>{s.short}</p>
+                <p style={{ margin: 0, color: "var(--muted-foreground)", fontSize: ".88rem" }}>
+                  {s.short}
+                </p>
                 <ChevronRight className="service-arrow" size={20} aria-hidden="true" />
               </Link>
             ))}
@@ -173,7 +210,10 @@ function ServiceDetailPage() {
                 <br />
                 <em>{service.title.split(" ")[0]}?</em>
               </h2>
-              <p>Tell us about your project and we'll schedule a free consultation at your convenience.</p>
+              <p>
+                Tell us about your project and we'll schedule a free consultation at your
+                convenience.
+              </p>
             </div>
             <Link to="/contact" className="button-primary" style={{ flexShrink: 0 }}>
               Start a conversation <ArrowRight size={17} />

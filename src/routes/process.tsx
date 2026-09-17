@@ -31,7 +31,13 @@ function ProcessPage() {
       <PageHero
         breadcrumbs={[{ label: "Home", to: "/" }, { label: "Process" }]}
         kicker="How we work"
-        title={<>A structured path<br /><em>from idea to handover.</em></>}
+        title={
+          <>
+            A structured path
+            <br />
+            <em>from idea to handover.</em>
+          </>
+        }
         subtitle="Transparency, quality and accountability are built into every stage of our delivery. Here's exactly what to expect when you work with us."
         variant="dark"
       />
@@ -39,7 +45,11 @@ function ProcessPage() {
       {/* ── Overview strip (dark bg continues) ── */}
       <section
         className="process-page-section"
-        style={{ background: "var(--dark)", color: "var(--dark-foreground)", paddingBottom: "clamp(6rem,11vw,10rem)" }}
+        style={{
+          background: "var(--dark)",
+          color: "var(--dark-foreground)",
+          paddingBottom: "clamp(6rem,11vw,10rem)",
+        }}
       >
         <div className="page-shell">
           <div className="process-overview-strip" data-reveal>
@@ -69,7 +79,9 @@ function ProcessPage() {
               {/* Detail */}
               <div className="process-step-body">
                 <p className="body-lg">{step.detail}</p>
-                <p className="eyebrow" style={{ marginBottom: "1.2rem" }}>Key activities</p>
+                <p className="eyebrow" style={{ marginBottom: "1.2rem" }}>
+                  Key activities
+                </p>
                 <ul className="process-points" aria-label={`Key activities for ${step.title}`}>
                   {step.points.map((pt) => (
                     <li key={pt}>{pt}</li>
@@ -133,7 +145,16 @@ function ProcessPage() {
                   }}
                 >
                   {q}
-                  <span style={{ color: "var(--primary)", fontSize: "1.5rem", lineHeight: 1, flexShrink: 0 }}>+</span>
+                  <span
+                    style={{
+                      color: "var(--primary)",
+                      fontSize: "1.5rem",
+                      lineHeight: 1,
+                      flexShrink: 0,
+                    }}
+                  >
+                    +
+                  </span>
                 </summary>
                 <p
                   style={{

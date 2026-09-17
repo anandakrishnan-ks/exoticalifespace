@@ -13,7 +13,7 @@ import residenceImage from "../assets/project-residence.jpg";
 import hospitalityImage from "../assets/project-hospitality.jpg";
 import commercialImage from "../assets/project-commercial.jpg";
 
-export const Route = createFileRoute("/")(({
+export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Exotica Lifespace | Interior Design & Construction" },
@@ -23,13 +23,16 @@ export const Route = createFileRoute("/")(({
           "Premium interior design, civil construction and turnkey project execution in Thiruvananthapuram, Kerala.",
       },
       { property: "og:title", content: "Exotica Lifespace | Thoughtfully Designed" },
-      { property: "og:description", content: "Concept to completion. One team. One responsibility." },
+      {
+        property: "og:description",
+        content: "Concept to completion. One team. One responsibility.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: HomePage,
-}));
+});
 
 function HomePage() {
   const [heroOffset, setHeroOffset] = useState(0);
@@ -68,8 +71,8 @@ function HomePage() {
             <em>Carefully built.</em>
           </h1>
           <p className="hero-copy">
-            Interior design, construction and turnkey contracting in Thiruvananthapuram—one team from concept to
-            completion.
+            Interior design, construction and turnkey contracting in Thiruvananthapuram—one team
+            from concept to completion.
           </p>
           <div className="hero-actions">
             <Link to="/contact" className="button-primary">
@@ -123,13 +126,20 @@ function HomePage() {
               <br />
               <em>engineering discipline.</em>
             </h2>
-            <p className="lead">We create spaces that are beautiful, functional, and built around the people who use them.</p>
-            <p>
-              Exotica Lifespace brings interior design, civil construction and turnkey execution together under one
-              accountable team. From concept development and space planning to material selection, site coordination and
-              final handover, we manage every stage with clarity.
+            <p className="lead">
+              We create spaces that are beautiful, functional, and built around the people who use
+              them.
             </p>
-            <p>Our approach balances refined aesthetics with comfort, everyday usability and lasting value.</p>
+            <p>
+              Exotica Lifespace brings interior design, civil construction and turnkey execution
+              together under one accountable team. From concept development and space planning to
+              material selection, site coordination and final handover, we manage every stage with
+              clarity.
+            </p>
+            <p>
+              Our approach balances refined aesthetics with comfort, everyday usability and lasting
+              value.
+            </p>
             <Link to="/about" className="text-link" style={{ marginTop: "2rem" }}>
               Our story &amp; values <ArrowRight size={16} />
             </Link>
@@ -149,7 +159,10 @@ function HomePage() {
                 <em>to the final handover.</em>
               </h2>
             </div>
-            <p>Integrated design, construction and execution for residential, commercial, retail and hospitality spaces.</p>
+            <p>
+              Integrated design, construction and execution for residential, commercial, retail and
+              hospitality spaces.
+            </p>
           </div>
           <div className="service-list">
             {services.slice(0, 4).map((service) => (
@@ -157,11 +170,34 @@ function HomePage() {
                 key={service.slug}
                 to={`/services/${service.slug}`}
                 className="service-row"
-                style={{ display: "grid", gridTemplateColumns: "5rem minmax(14rem,.9fr) minmax(18rem,1.2fr) 2rem", alignItems: "center", gap: "2rem", minHeight: "9.5rem", paddingInline: "0", borderBottom: "1px solid var(--border)", textDecoration: "none", color: "inherit", transition: "background .35s, padding .35s" }}
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "5rem minmax(14rem,.9fr) minmax(18rem,1.2fr) 2rem",
+                  alignItems: "center",
+                  gap: "2rem",
+                  minHeight: "9.5rem",
+                  paddingInline: "0",
+                  borderBottom: "1px solid var(--border)",
+                  textDecoration: "none",
+                  color: "inherit",
+                  transition: "background .35s, padding .35s",
+                }}
               >
                 <span className="service-number">{service.number}</span>
-                <h3 style={{ margin: 0, fontFamily: "var(--font-display)", fontSize: "clamp(1.35rem,2.2vw,2rem)", fontWeight: 400, lineHeight: 1.1 }}>{service.title}</h3>
-                <p style={{ margin: 0, color: "var(--muted-foreground)", fontSize: ".9rem" }}>{service.short}</p>
+                <h3
+                  style={{
+                    margin: 0,
+                    fontFamily: "var(--font-display)",
+                    fontSize: "clamp(1.35rem,2.2vw,2rem)",
+                    fontWeight: 400,
+                    lineHeight: 1.1,
+                  }}
+                >
+                  {service.title}
+                </h3>
+                <p style={{ margin: 0, color: "var(--muted-foreground)", fontSize: ".9rem" }}>
+                  {service.short}
+                </p>
                 <ChevronRight className="service-arrow" size={22} aria-hidden="true" />
               </Link>
             ))}
@@ -186,7 +222,10 @@ function HomePage() {
                 <em>from idea to handover.</em>
               </h2>
             </div>
-            <p>Transparency, quality and accountability are built into every stage of our delivery process.</p>
+            <p>
+              Transparency, quality and accountability are built into every stage of our delivery
+              process.
+            </p>
           </div>
           <div className="home-process-grid">
             {processSteps.map((step) => (
@@ -217,12 +256,21 @@ function HomePage() {
                 <em>with precision.</em>
               </h2>
             </div>
-            <p>Homes, hotels, offices and commercial environments shaped through design excellence and dependable execution.</p>
+            <p>
+              Homes, hotels, offices and commercial environments shaped through design excellence
+              and dependable execution.
+            </p>
           </div>
           <div className="project-editorial">
             <figure className="project-tall" data-reveal>
               <div className="image-wrap">
-                <img src={residenceImage} alt="Contemporary tropical luxury residence" loading="lazy" width={1200} height={1504} />
+                <img
+                  src={residenceImage}
+                  alt="Contemporary tropical luxury residence"
+                  loading="lazy"
+                  width={1200}
+                  height={1504}
+                />
               </div>
               <figcaption>
                 <span>01 / Residential</span>
@@ -231,7 +279,13 @@ function HomePage() {
             </figure>
             <figure className="project-wide" data-reveal>
               <div className="image-wrap">
-                <img src={hospitalityImage} alt="Refined Kerala hospitality interior" loading="lazy" width={1600} height={1104} />
+                <img
+                  src={hospitalityImage}
+                  alt="Refined Kerala hospitality interior"
+                  loading="lazy"
+                  width={1600}
+                  height={1104}
+                />
               </div>
               <figcaption>
                 <span>02 / Hospitality</span>
@@ -240,7 +294,13 @@ function HomePage() {
             </figure>
             <figure className="project-wide project-offset" data-reveal>
               <div className="image-wrap">
-                <img src={commercialImage} alt="Elegant contemporary commercial reception" loading="lazy" width={1600} height={1104} />
+                <img
+                  src={commercialImage}
+                  alt="Elegant contemporary commercial reception"
+                  loading="lazy"
+                  width={1600}
+                  height={1104}
+                />
               </div>
               <figcaption>
                 <span>03 / Commercial</span>
@@ -248,8 +308,20 @@ function HomePage() {
               </figcaption>
             </figure>
           </div>
-          <div style={{ marginTop: "3rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
-            <p className="project-disclaimer">Representative imagery shown while the Exotica Lifespace project portfolio is being prepared.</p>
+          <div
+            style={{
+              marginTop: "3rem",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: "1rem",
+            }}
+          >
+            <p className="project-disclaimer">
+              Representative imagery shown while the Exotica Lifespace project portfolio is being
+              prepared.
+            </p>
             <Link to="/projects" className="text-link" style={{ marginTop: 0 }}>
               Browse all projects <ArrowRight size={16} />
             </Link>
@@ -264,7 +336,8 @@ function HomePage() {
         <div className="page-shell vision-content" data-reveal>
           <p className="eyebrow eyebrow-light">Our vision</p>
           <blockquote>
-            "To create exceptional spaces through design excellence, engineering precision and dependable execution."
+            "To create exceptional spaces through design excellence, engineering precision and
+            dependable execution."
           </blockquote>
           <p>Design · Engineering · Quality · Transparency · Timely Delivery</p>
         </div>
@@ -278,7 +351,10 @@ function HomePage() {
             <br />
             <em>distinctly yours.</em>
           </h2>
-          <p>Whether you're building, renovating or reimagining an existing interior—we'd love to hear about it.</p>
+          <p>
+            Whether you're building, renovating or reimagining an existing interior—we'd love to
+            hear about it.
+          </p>
           <Link to="/contact" className="button-primary">
             Book a free consultation <ArrowRight size={17} />
           </Link>

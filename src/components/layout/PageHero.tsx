@@ -37,9 +37,7 @@ export function PageHero({
         <nav className="breadcrumb inner-hero-breadcrumb" aria-label="Breadcrumb">
           {breadcrumbs.map((crumb, i) => (
             <span key={crumb.label} className="breadcrumb-item">
-              {i > 0 && (
-                <ChevronRight size={11} className="breadcrumb-sep" aria-hidden="true" />
-              )}
+              {i > 0 && <ChevronRight size={11} className="breadcrumb-sep" aria-hidden="true" />}
               {crumb.to ? (
                 <Link to={crumb.to} className="breadcrumb-link">
                   {crumb.label}

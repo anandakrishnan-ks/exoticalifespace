@@ -57,7 +57,13 @@ function AboutPage() {
       <PageHero
         breadcrumbs={[{ label: "Home", to: "/" }, { label: "About" }]}
         kicker="Exotica Lifespace"
-        title={<>Creative vision,<br /><em>engineering discipline.</em></>}
+        title={
+          <>
+            Creative vision,
+            <br />
+            <em>engineering discipline.</em>
+          </>
+        }
         subtitle="We bring interior design, civil construction and turnkey project execution together under one accountable team — creating spaces that are beautiful, functional, and built to last."
         variant="dark"
       />
@@ -74,22 +80,23 @@ function AboutPage() {
                 <em>delivered with care.</em>
               </h2>
               <p className="lead">
-                Exotica Lifespace was founded on a simple but ambitious belief: that great spaces should be accessible,
-                not just aspirational.
+                Exotica Lifespace was founded on a simple but ambitious belief: that great spaces
+                should be accessible, not just aspirational.
               </p>
               <p>
-                We bring together the disciplines of interior design, civil construction, and turnkey project execution
-                under one roof. Our team includes experienced designers, engineers, project managers, and skilled
-                craftspeople who collaborate from the first sketch to the final snag check.
+                We bring together the disciplines of interior design, civil construction, and
+                turnkey project execution under one roof. Our team includes experienced designers,
+                engineers, project managers, and skilled craftspeople who collaborate from the first
+                sketch to the final snag check.
               </p>
               <p>
-                Based in Thiruvananthapuram, Kerala, we work across residential, commercial, retail and hospitality
-                sectors — serving clients who value quality, clarity and a team that actually delivers on its
-                commitments.
+                Based in Thiruvananthapuram, Kerala, we work across residential, commercial, retail
+                and hospitality sectors — serving clients who value quality, clarity and a team that
+                actually delivers on its commitments.
               </p>
               <p>
-                Our philosophy is straightforward: listen carefully, design thoughtfully, build honestly, and hand over
-                with pride.
+                Our philosophy is straightforward: listen carefully, design thoughtfully, build
+                honestly, and hand over with pride.
               </p>
               <Link to="/services" className="text-link" style={{ marginTop: "2rem" }}>
                 What we offer <ArrowRight size={16} />
@@ -129,8 +136,8 @@ function AboutPage() {
               </h2>
             </div>
             <p>
-              These aren't slogans — they're the standards we hold ourselves to on every project, regardless of size or
-              budget.
+              These aren't slogans — they're the standards we hold ourselves to on every project,
+              regardless of size or budget.
             </p>
           </div>
           <div className="values-grid">
@@ -158,8 +165,8 @@ function AboutPage() {
               </h2>
             </div>
             <p>
-              More than a contractor — an accountable project partner committed to turning your vision into a completed
-              space you're proud of.
+              More than a contractor — an accountable project partner committed to turning your
+              vision into a completed space you're proud of.
             </p>
           </div>
           <div className="strengths-full-grid">
@@ -183,7 +190,8 @@ function AboutPage() {
         <div className="page-shell vision-content" data-reveal>
           <p className="eyebrow eyebrow-light">Our vision</p>
           <blockquote>
-            "To create exceptional spaces through design excellence, engineering precision and dependable execution."
+            "To create exceptional spaces through design excellence, engineering precision and
+            dependable execution."
           </blockquote>
           <p>Design · Engineering · Quality · Transparency · Timely Delivery</p>
         </div>

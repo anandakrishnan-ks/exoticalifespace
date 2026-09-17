@@ -1,25 +1,27 @@
-// ── Shared site data ────────────────────────────────────────────────────────
-
-export const navItems = [
-  { label: "About", to: "/about" },
-  { label: "Services", to: "/services" },
-  { label: "Process", to: "/process" },
-  { label: "Projects", to: "/projects" },
-  { label: "Contact", to: "/contact" },
-] as const;
-
-export interface Service {
-  slug: string;
-  number: string;
-  title: string;
-  short: string;
-  description: string;
-  included: readonly string[];
-  approach: string;
-  projectTypes: readonly string[];
-}
-
-export const services: Service[] = [
+//#region node_modules/.nitro/vite/services/ssr/assets/data-D-Bsdiz7.js
+var navItems = [
+  {
+    label: "About",
+    to: "/about",
+  },
+  {
+    label: "Services",
+    to: "/services",
+  },
+  {
+    label: "Process",
+    to: "/process",
+  },
+  {
+    label: "Projects",
+    to: "/projects",
+  },
+  {
+    label: "Contact",
+    to: "/contact",
+  },
+];
+var services = [
   {
     slug: "interior-design",
     number: "01",
@@ -164,17 +166,7 @@ export const services: Service[] = [
     ],
   },
 ];
-
-export interface ProcessStep {
-  number: string;
-  title: string;
-  short: string;
-  detail: string;
-  duration: string;
-  points: readonly string[];
-}
-
-export const processSteps: ProcessStep[] = [
+var processSteps = [
   {
     number: "01",
     title: "Consultation",
@@ -235,8 +227,7 @@ export const processSteps: ProcessStep[] = [
     ],
   },
 ];
-
-export const strengths = [
+var strengths = [
   [
     "Single-Point Responsibility",
     "Design, procurement, construction and interiors coordinated by one team.",
@@ -261,18 +252,8 @@ export const strengths = [
     "Designs Tailored to You",
     "Every decision responds to your requirements, preferences, lifestyle and budget.",
   ],
-] as const;
-
-export interface Project {
-  id: number;
-  category: string;
-  title: string;
-  location: string;
-  description: string;
-  imageKey: "hero" | "about" | "residence" | "hospitality" | "commercial";
-}
-
-export const projects: Project[] = [
+];
+var projects = [
   {
     id: 1,
     category: "Residential",
@@ -326,3 +307,5 @@ export const projects: Project[] = [
     imageKey: "hospitality",
   },
 ];
+//#endregion
+export { strengths as a, services as i, processSteps as n, projects as r, navItems as t };

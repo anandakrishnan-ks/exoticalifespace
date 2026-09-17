@@ -31,7 +31,13 @@ function ServicesPage() {
       <PageHero
         breadcrumbs={[{ label: "Home", to: "/" }, { label: "Services" }]}
         kicker="What we offer"
-        title={<>From your first idea<br /><em>to the final handover.</em></>}
+        title={
+          <>
+            From your first idea
+            <br />
+            <em>to the final handover.</em>
+          </>
+        }
         subtitle="Integrated design, construction and execution services for residential, commercial, retail and hospitality spaces — delivered by one accountable team."
         variant="teal"
       />
@@ -49,9 +55,9 @@ function ServicesPage() {
               </h2>
             </div>
             <p>
-              From spatial planning and design to civil construction, MEP, custom furniture and complete turnkey
-              delivery — we provide every service your project requires. No fragmented teams. No communication gaps. One
-              team that's accountable for the whole.
+              From spatial planning and design to civil construction, MEP, custom furniture and
+              complete turnkey delivery — we provide every service your project requires. No
+              fragmented teams. No communication gaps. One team that's accountable for the whole.
             </p>
           </div>
         </div>
@@ -93,7 +99,9 @@ function ServicesPage() {
                 >
                   {service.title}
                 </h3>
-                <p style={{ margin: 0, color: "var(--muted-foreground)", fontSize: ".9rem" }}>{service.short}</p>
+                <p style={{ margin: 0, color: "var(--muted-foreground)", fontSize: ".9rem" }}>
+                  {service.short}
+                </p>
                 <ChevronRight className="service-arrow" size={22} aria-hidden="true" />
               </Link>
             ))}
@@ -112,8 +120,8 @@ function ServicesPage() {
                 <em>you need?</em>
               </h2>
               <p>
-                Book a free consultation and let's talk through your project. We'll help you understand the scope,
-                timeline and cost — with no obligation.
+                Book a free consultation and let's talk through your project. We'll help you
+                understand the scope, timeline and cost — with no obligation.
               </p>
             </div>
             <Link to="/contact" className="button-primary" style={{ flexShrink: 0 }}>

@@ -43,7 +43,8 @@ function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState<Category>("All");
   useReveal();
 
-  const filtered = activeFilter === "All" ? projects : projects.filter((p) => p.category === activeFilter);
+  const filtered =
+    activeFilter === "All" ? projects : projects.filter((p) => p.category === activeFilter);
 
   return (
     <main className="bg-background">
@@ -52,7 +53,13 @@ function ProjectsPage() {
       <PageHero
         breadcrumbs={[{ label: "Home", to: "/" }, { label: "Projects" }]}
         kicker="Featured expertise"
-        title={<>Spaces crafted<br /><em>with precision.</em></>}
+        title={
+          <>
+            Spaces crafted
+            <br />
+            <em>with precision.</em>
+          </>
+        }
         subtitle="Homes, hotels, offices and commercial environments shaped through design excellence and dependable execution in Thiruvananthapuram, Kerala."
         variant="surface"
       />
@@ -61,7 +68,11 @@ function ProjectsPage() {
       <section className="projects-page-body">
         <div className="page-shell">
           {/* Filter bar */}
-          <div className="projects-filter-bar" role="group" aria-label="Filter projects by category">
+          <div
+            className="projects-filter-bar"
+            role="group"
+            aria-label="Filter projects by category"
+          >
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -72,7 +83,7 @@ function ProjectsPage() {
               >
                 {cat}
                 {cat !== "All" && (
-                  <span style={{ marginLeft: ".5rem", opacity: .55 }}>
+                  <span style={{ marginLeft: ".5rem", opacity: 0.55 }}>
                     ({projects.filter((p) => p.category === cat).length})
                   </span>
                 )}
@@ -94,7 +105,9 @@ function ProjectsPage() {
                   />
                 </div>
                 <div className="project-page-card-meta">
-                  <span>{project.category} · {project.location}</span>
+                  <span>
+                    {project.category} · {project.location}
+                  </span>
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
                 </div>
@@ -103,8 +116,8 @@ function ProjectsPage() {
           </div>
 
           <p className="projects-disclaimer">
-            Representative imagery shown while the Exotica Lifespace project portfolio is being finalised. Photography
-            from completed client projects will be added progressively.
+            Representative imagery shown while the Exotica Lifespace project portfolio is being
+            finalised. Photography from completed client projects will be added progressively.
           </p>
         </div>
       </section>
@@ -122,14 +135,20 @@ function ProjectsPage() {
               </h2>
             </div>
             <p>
-              We work across residential, commercial, retail and hospitality — bringing the same commitment to quality
-              and precision to every project type.
+              We work across residential, commercial, retail and hospitality — bringing the same
+              commitment to quality and precision to every project type.
             </p>
           </div>
           <div className="project-editorial">
             <figure className="project-tall" data-reveal>
               <div className="image-wrap">
-                <img src={residenceImage} alt="Contemporary tropical luxury residence" loading="lazy" width={1200} height={1504} />
+                <img
+                  src={residenceImage}
+                  alt="Contemporary tropical luxury residence"
+                  loading="lazy"
+                  width={1200}
+                  height={1504}
+                />
               </div>
               <figcaption>
                 <span>Residential</span>
@@ -138,7 +157,13 @@ function ProjectsPage() {
             </figure>
             <figure className="project-wide" data-reveal>
               <div className="image-wrap">
-                <img src={hospitalityImage} alt="Refined Kerala hospitality interior" loading="lazy" width={1600} height={1104} />
+                <img
+                  src={hospitalityImage}
+                  alt="Refined Kerala hospitality interior"
+                  loading="lazy"
+                  width={1600}
+                  height={1104}
+                />
               </div>
               <figcaption>
                 <span>Hospitality</span>
@@ -147,7 +172,13 @@ function ProjectsPage() {
             </figure>
             <figure className="project-wide project-offset" data-reveal>
               <div className="image-wrap">
-                <img src={commercialImage} alt="Elegant contemporary commercial space" loading="lazy" width={1600} height={1104} />
+                <img
+                  src={commercialImage}
+                  alt="Elegant contemporary commercial space"
+                  loading="lazy"
+                  width={1600}
+                  height={1104}
+                />
               </div>
               <figcaption>
                 <span>Commercial</span>

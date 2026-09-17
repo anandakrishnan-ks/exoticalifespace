@@ -38,7 +38,13 @@ function ContactPage() {
       <PageHero
         breadcrumbs={[{ label: "Home", to: "/" }, { label: "Contact" }]}
         kicker="Start a conversation"
-        title={<>Let's shape a space<br /><em>distinctly yours.</em></>}
+        title={
+          <>
+            Let's shape a space
+            <br />
+            <em>distinctly yours.</em>
+          </>
+        }
         subtitle="Tell us what you are planning — whether you are building, renovating or reimagining an existing interior. A free consultation is the best place to start."
         variant="dark"
       />
@@ -56,8 +62,8 @@ function ContactPage() {
                 <em>from you.</em>
               </h2>
               <p className="contact-intro-text">
-                Whether you have a clear brief or just an idea, we're happy to talk. Every project starts with a
-                conversation — reach out and we'll respond within one working day.
+                Whether you have a clear brief or just an idea, we're happy to talk. Every project
+                starts with a conversation — reach out and we'll respond within one working day.
               </p>
 
               <div className="contact-info-card">
@@ -89,7 +95,15 @@ function ContactPage() {
 
               <div className="contact-info-card">
                 <span className="contact-info-label">What to expect</span>
-                <ul style={{ listStyle: "none", padding: 0, margin: "0.8rem 0 0", display: "grid", gap: ".6rem" }}>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    padding: 0,
+                    margin: "0.8rem 0 0",
+                    display: "grid",
+                    gap: ".6rem",
+                  }}
+                >
                   {[
                     "Response within 1 working day",
                     "No obligation free consultation",
@@ -106,7 +120,10 @@ function ContactPage() {
                         fontSize: ".85rem",
                       }}
                     >
-                      <Check size={13} style={{ color: "var(--primary)", flexShrink: 0, marginTop: ".15rem" }} />
+                      <Check
+                        size={13}
+                        style={{ color: "var(--primary)", flexShrink: 0, marginTop: ".15rem" }}
+                      />
                       {item}
                     </li>
                   ))}
@@ -126,22 +143,44 @@ function ContactPage() {
               <form className="enquiry-form" onSubmit={submitEnquiry} noValidate>
                 <div className="field">
                   <label htmlFor="c-name">Full name</label>
-                  <input id="c-name" name="name" required autoComplete="name" placeholder="Your full name" />
+                  <input
+                    id="c-name"
+                    name="name"
+                    required
+                    autoComplete="name"
+                    placeholder="Your full name"
+                  />
                 </div>
                 <div className="field-row">
                   <div className="field">
                     <label htmlFor="c-phone">Phone number</label>
-                    <input id="c-phone" name="phone" type="tel" required autoComplete="tel" placeholder="+91 00000 00000" />
+                    <input
+                      id="c-phone"
+                      name="phone"
+                      type="tel"
+                      required
+                      autoComplete="tel"
+                      placeholder="+91 00000 00000"
+                    />
                   </div>
                   <div className="field">
                     <label htmlFor="c-email">Email address</label>
-                    <input id="c-email" name="email" type="email" required autoComplete="email" placeholder="you@example.com" />
+                    <input
+                      id="c-email"
+                      name="email"
+                      type="email"
+                      required
+                      autoComplete="email"
+                      placeholder="you@example.com"
+                    />
                   </div>
                 </div>
                 <div className="field">
                   <label htmlFor="c-project-type">Project type</label>
                   <select id="c-project-type" name="projectType" required defaultValue="">
-                    <option value="" disabled>Select a project type</option>
+                    <option value="" disabled>
+                      Select a project type
+                    </option>
                     <option>Residential interior design</option>
                     <option>New construction</option>
                     <option>Renovation or remodel</option>
@@ -154,7 +193,9 @@ function ContactPage() {
                 <div className="field">
                   <label htmlFor="c-budget">Approximate budget</label>
                   <select id="c-budget" name="budget" defaultValue="">
-                    <option value="" disabled>Select a budget range (optional)</option>
+                    <option value="" disabled>
+                      Select a budget range (optional)
+                    </option>
                     <option>Below ₹10 lakhs</option>
                     <option>₹10 – ₹25 lakhs</option>
                     <option>₹25 – ₹50 lakhs</option>
@@ -180,7 +221,8 @@ function ContactPage() {
 
                 {sent && (
                   <p className="form-success" role="status">
-                    <Check size={16} /> Thank you. Your enquiry has been received and our team will be in touch shortly.
+                    <Check size={16} /> Thank you. Your enquiry has been received and our team will
+                    be in touch shortly.
                   </p>
                 )}
               </form>
