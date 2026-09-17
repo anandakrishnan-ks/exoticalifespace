@@ -262,7 +262,7 @@ function HomePage() {
             </p>
           </div>
           <div className="project-editorial">
-            <figure className="project-tall" data-reveal>
+            <figure data-reveal>
               <div className="image-wrap">
                 <img
                   src={residenceImage}
@@ -277,7 +277,7 @@ function HomePage() {
                 <h3>Luxury Residences</h3>
               </figcaption>
             </figure>
-            <figure className="project-wide" data-reveal>
+            <figure data-reveal>
               <div className="image-wrap">
                 <img
                   src={hospitalityImage}
@@ -292,7 +292,7 @@ function HomePage() {
                 <h3>Hotel &amp; Hospitality</h3>
               </figcaption>
             </figure>
-            <figure className="project-wide project-offset" data-reveal>
+            <figure data-reveal>
               <div className="image-wrap">
                 <img
                   src={commercialImage}
