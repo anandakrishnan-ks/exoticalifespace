@@ -229,19 +229,12 @@ Premium visuals → Typography → Whitespace → Editorial layouts → Subtle m
 
 Most importantly, use the uploaded logo exactly as provided and build the entire visual language around it.
 
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://refined-visual-atelier.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/03c932b0-fb1e-43b1-885c-76209411f571).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
 ## Development
+
+```sh
+npm install
+npm run dev
+```
 
 Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
