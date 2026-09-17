@@ -268,6 +268,9 @@ p {
   justify-content: center;
   align-items: flex-start;
   padding-top: 7rem;
+  color: var(--dark-foreground);
+  --primary: var(--dark-foreground);
+  --primary-foreground: var(--dark);
 }
 .hero-eyebrow {
   animation: hero-rise 0.8s 0.1s both;
@@ -344,7 +347,7 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   min-height: 7rem;
-  color: var(--dark-foreground);
+  color: var(--foreground);
   background: var(--secondary);
 }
 .trust-strip div {
@@ -352,7 +355,7 @@ p {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  border-right: 1px solid color-mix(in oklab, var(--dark-foreground) 14%, transparent);
+  border-right: 1px solid color-mix(in oklab, var(--foreground) 14%, transparent);
   font-family: var(--font-display);
   font-size: 1.35rem;
 }
@@ -386,10 +389,10 @@ p {
   width: 15rem;
   padding: 1.6rem;
   color: var(--dark-foreground);
-  background: var(--secondary);
+  background: var(--dark);
 }
 .about-note span {
-  color: var(--primary);
+  color: var(--primary-foreground);
   font-size: 0.58rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -783,6 +786,8 @@ figcaption h3 {
   padding: 6rem 0 2rem;
   color: var(--dark-foreground);
   background: var(--dark);
+  --primary: var(--dark-foreground);
+  --primary-foreground: var(--dark);
 }
 .footer-top {
   display: grid;
